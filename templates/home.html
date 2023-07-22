@@ -9,13 +9,22 @@
     <title>Homepage</title>
 </head>
 <body>
+    <img class="img-fluid" id="banner" src="/static/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg" height="300">
+    {% include 'nav.html' %}
     <div class="container">
         <h1 class="text-center">Jovian Careers</h1>
-        <img class="img-fluid" id="banner" src="/static/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg" height="300">
-        <p class="lead">Do so written as raising parlors spirits mr elderly. Made late in of high left hold. Carried females of up highest calling. Limits marked led silent dining her she far. Sir but elegance marriage dwelling likewise position old pleasure men. Dissimilar themselves simplicity no of contrasted as. Delay great day hours men. Stuff front to do allow to asked he.
-        At distant inhabit amongst by. Appetite welcomed interest the goodness boy not. Estimable education for disposing pronounce her. John size good gay plan sent old roof own. Inquietude saw understood his friendship frequently yet. Nature his marked ham wished.
-        Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her. Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters. Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly unpleasant especially you dispatched bed favourable.
-        </p>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6"> <!--display on medium or bigger devices-->
+                <p class="lead">Do so written as raising parlors spirits mr elderly. Made late in of high left hold. Carried females of up highest calling. Limits marked led silent dining her she far. Sir but elegance marriage dwelling likewise position old pleasure men. Dissimilar themselves simplicity no of contrasted as. Delay great day hours men. Stuff front to do allow to asked he.
+                    At distant inhabit amongst by. Appetite welcomed interest the goodness boy not. Estimable education for disposing pronounce her. John size good gay plan sent old roof own. Inquietude saw understood his friendship frequently yet. Nature his marked ham wished.
+                    Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her. Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters. Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly unpleasant especially you dispatched bed favourable.
+                    </p>
+            </div>
+            <div class="d-none d-md-block col-md-6"> <!--Won't show on mobile-->
+                <img src="/static/dylan-gillis-KdeqA3aTnBY-unsplash.jpg" style="height: 320px;" alt="">
+            </div>
+        </div>
+     
 
         <h2 class="text-center">Job Openings</h2>
         <div>
@@ -24,11 +33,11 @@
             {% endfor %}
         </div>
         <div style="text-align: center;">
-            <button>Contact Us</button>
-            <p class="mt-4">Copyright jovian</p>
+            <a href="mailto:hello@hex.ai?subject=Contact Us" class="btn btn-primary btn-lg">Contact Us</a>
         </div>
         
     </div>
+    {% include 'footer.html' %}
 
 
 </body>
