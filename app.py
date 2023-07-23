@@ -18,9 +18,10 @@ def home():
     JOBS= load_jobs_from_db()
     return render_template('home.html', jobs=JOBS)
 
-# @app.route("/api/jobs")
-# def list_jobs():
-#     return jsonify(JOBS)
+@app.route("/api/jobs")
+def list_jobs():
+    JOBS= load_jobs_from_db()
+    return jsonify(JOBS)
 
 if __name__ =="__main__":
     app.run(debug=True)
