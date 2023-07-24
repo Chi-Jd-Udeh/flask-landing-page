@@ -23,3 +23,20 @@ def load_jobs_from_db():
         for row in results_as_dict:
             jobs.append(dict(row))
         return jobs
+    
+        
+
+def load_job_from_db(id):
+  with engine.connect() as conn:
+
+    result = conn.execute( text("SELECT * FROM jobs WHERE id = {}".format(id)))
+
+    results_as_dict = result.mappings().all()
+    jobs=[]
+    for row in results_as_dict:
+        jobs.append(dict(row))        
+
+    if len(jobs) == 0:
+      return None
+    else:
+      return dict(jobs[0])
