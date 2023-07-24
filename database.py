@@ -1,6 +1,10 @@
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+import os
 
-db_connet_string="mysql+pymysql://22xmk0237wkn2bbfwe7z:pscale_pw_MGlsH6eED36ndFrbs2KnPWI8JfmpjB9IkvINidr2ZB3@aws.connect.psdb.cloud/chicareer2?charset=utf8mb4"
+load_dotenv() 
+
+db_connet_string=os.environ['User']
 
 engine = create_engine(db_connet_string,
                        connect_args={
