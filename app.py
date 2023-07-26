@@ -29,5 +29,13 @@ def apply_to_job(id):
     add_application_to_db(id, data)
     return render_template('application_submitted.html', application=data, job=job)
 
+@app.route("/about")
+def load_about_page():
+    return render_template('about.html')
+
+@app.route("/community")
+def load_community_chat():
+    return render_template('community_chat.html')
+
 if __name__ =="__main__":
     app.run(debug=True)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'bootstrap.html' %}
+    <title>About page</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+
+    <div class="container">
+        <h3 style="text-align: center;">About us</h3>
+
+        <div class="row"  style="margin-bottom: 16px;">
+            <div class="d-none d-md-block col-md-4">
+                <img src="/static/tech.jpg" alt="" height="320px">
+            </div>
+            <div class="col-md-4">
+                <p>At Hex Diagonal we strive to develop Products that people actually
+                    we don't want our products ending up in someone download folder collecting dust. 
+                    When clients come to us for our services we want them to feel welcomed and at home. 
+                    To achive this we believe in community discussion. Problems can only be solved effectively 
+                    through discussion.
+                </p>
+            </div>    
+        </div> 
+    </div>
+    
+    {% include 'footer.html' %}
+</body>
+</html>
